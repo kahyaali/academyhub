@@ -1,0 +1,34 @@
+# Visual Studio
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.cache
+*.tmp
+
+# Packages
+packages/
+node_modules/
+
+# Logs
+Logs/
+*.log
+
+# Environment
+.env
+*.env
+
+# Build outputs
+out/
+build/
+dist/
+
+# IDE
+*.sln.ide
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store

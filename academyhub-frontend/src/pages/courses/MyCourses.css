@@ -1,0 +1,238 @@
+.my-courses-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.my-courses-header {
+    margin-bottom: 24px;
+}
+
+.my-courses-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f0c29;
+    margin: 0;
+}
+
+.my-courses-header p {
+    color: #6b7280;
+    margin: 4px 0 0 0;
+}
+
+.my-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.my-course-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.my-course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.my-course-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.my-course-image {
+    position: relative;
+    height: 140px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e1b4b, #4f46e5);
+}
+
+.my-course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.my-course-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.my-course-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.my-course-progress-bar {
+    height: 100%;
+    background: #10b981;
+    transition: width 0.5s ease;
+}
+
+.my-course-body {
+    padding: 16px;
+}
+
+.my-course-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0f0c29;
+    margin: 0 0 6px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.my-course-instructor {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0 0 12px 0;
+}
+
+.my-course-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid #f3f4f6;
+}
+
+.my-course-progress-text {
+    font-size: 14px;
+    color: #10b981;
+    font-weight: 600;
+}
+
+.my-course-play {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #667eea;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Empty State */
+.my-courses-empty {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.empty-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.my-courses-empty h3 {
+    font-size: 24px;
+    color: #0f0c29;
+    margin: 0 0 8px 0;
+}
+
+.my-courses-empty p {
+    color: #6b7280;
+    margin: 0 0 24px 0;
+}
+
+.btn-browse {
+    display: inline-block;
+    padding: 12px 32px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-browse:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+    color: white;
+}
+
+/* Loading */
+.my-courses-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    gap: 16px;
+}
+
+.my-courses-loading .spin {
+    animation: spin 1s linear infinite;
+    color: #667eea;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .my-courses-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .my-courses-page {
+        padding: 16px;
+    }
+
+    .my-courses-header h1 {
+        font-size: 24px;
+    }
+
+    .my-courses-empty {
+        padding: 60px 16px;
+    }
+
+    .empty-icon {
+        font-size: 48px;
+    }
+
+    .my-courses-empty h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .my-courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .my-course-image {
+        height: 120px;
+    }
+
+    .my-course-title {
+        font-size: 15px;
+    }
+
+    .my-course-bottom {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .btn-browse {
+        width: 100%;
+        text-align: center;
+    }
+}

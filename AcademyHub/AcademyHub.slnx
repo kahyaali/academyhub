@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="AcademyHub.API/AcademyHub.API.csproj" />
+    <Project Path="AcademyHub.Application/AcademyHub.Application.csproj" />
+    <Project Path="AcademyHub.Core/AcademyHub.Core.csproj" />
+    <Project Path="AcademyHub.Infrastructure/AcademyHub.Infrastructure.csproj" />
+    <Project Path="AcademyHub.Worker/AcademyHub.Worker.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
